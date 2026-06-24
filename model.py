@@ -4,7 +4,7 @@ import os
 import joblib
 from sklearn.ensemble import GradientBoostingClassifier
 
-st.set_page_config(page_title="Prediksi Mutu Air")
+st.set_page_config(page_title="Klasifikasi Mutu Air")
 
 st.title("Klasifikasi Status Mutu Air (GBC Model)")
 st.write("Aplikasi ini memprediksi klasifikasi mutu air berdasarkan model Gradient Boosting Classifier.")
