@@ -72,7 +72,7 @@ for i, feature in enumerate(feature_names):
             step=step_val
         )
 
-if st.button("Prediksi Status Mutu Air", type="primary"):
+if st.button("Klasifikasi Status Mutu Air", type="primary"):
     input_df = pd.DataFrame([user_inputs])
 
     pred = model.predict(input_df)[0]
