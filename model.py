@@ -22,7 +22,6 @@ def load_data():
     for col in kolom_numerik:
         batas_atas = df[col].quantile(0.95)
         df[col] = df[col].clip(upper=batas_atas)
-    # ======================================
     
     return df
 
@@ -88,8 +87,7 @@ if st.button("Klasifikasi Status Mutu Air", type="primary"):
     hasil_teks = label_mapping.get(pred, f"Kelas {pred}")
     
     st.success(f"### Hasil Prediksi: **{hasil_teks}**")
-    
-    # Menampilkan probabilitas
+
     st.write("**Tingkat Keyakinan Model (Probabilitas):**")
     for class_val, prob in zip(model.classes_, proba):
         nama_kelas = label_mapping.get(class_val, f"Kelas {class_val}")
